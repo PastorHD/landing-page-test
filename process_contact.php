@@ -36,19 +36,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          $mail->isSMTP(); // Establecer el uso de SMTP
          $mail->Host = 'smtp.gmail.com'; // Especificar el servidor SMTP
          $mail->SMTPAuth = true; // Activar autenticación SMTP
-         $mail->Username = 'champion.pokemon327@gmail.com'; // Tu correo de Gmail
+         $mail->Username = 'darkors.marcors5@gmail.com'; // Tu correo de Gmail
          $mail->Password = 'jdax yzqs rbei ibrn'; // Tu contraseña de Gmail o contraseña de aplicación
          $mail->SMTPSecure = 'tls'; // Habilitar encriptación TLS
          $mail->Port = 587; // Puerto TCP para TLS
  
          // Remitente y destinatario
-         $mail->setFrom('champion.pokemon327@gmail.com', 'David Martinez');
+         $mail->setFrom('darkors.marcors5@gmail.com', 'David Martinez');
          $mail->addAddress($email); // Agregar destinatario (el que llenó el formulario)
  
          // Contenido del correo
          $mail->isHTML(true); // Establecer el formato de correo como HTML
          $mail->Subject = 'Nuevo mensaje de contacto';
-         $mail->Body    = "Nombre: $name<br>Correo: $email<br>Mensaje:<br>$message";
+         $mail->Body = "Nombre: $name<br>Correo: $email<br>Mensaje:<br>$message";
 
          $mail->send();
         echo "<h1>Gracias, $name</h1>";
