@@ -40,13 +40,29 @@
 
         <Section>
             <h2>Contáctanos</h2>
-            <p>Proporciona información de contacto o un formulario aquí</p>
+            <form action="process_contact.php" method="POST">
+
+            
+            <div class="form-group"> 
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
         </Section>
 
     </div>
 
     
-    <footer class="bg-dark text-white text-center p-4">
+    <footer class="bg-dark text-white text-center p-4 style="position: relative;">
         <p>
             &copy; 2024 Mi empresa. Todos los derechos reservados.
         </p>
