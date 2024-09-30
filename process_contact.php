@@ -3,6 +3,7 @@
 require 'src/PHPMailer.php';
 require 'src/SMTP.php';
 require 'src/Exception.php';    
+require 'db_connection.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -11,6 +12,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
+
+// Consulta para insertar los datos
+$sql = "INSERT INTO contacts (name,email,message) VALUES ('$name','$email', '$message')";
+
+if ($conn->query($sql) === TRUE){
+    echo "Datos guardados correctamente";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+//Cerrar conexión
+$conn->close();
 
     // Aquí se maneja el envia del formulario, como enviarlo por correo electronico
 
