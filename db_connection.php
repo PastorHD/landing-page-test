@@ -1,9 +1,9 @@
 <?php
 //Datos de conexión
-$servername = "localhost:3307";
-$username = "root";
-$password = "Password8956";
-$db_name = "landing_page_db";
+$servername = "localhost";
+$username = "if0_37413050";
+$password = "2Zo52o7BmD";
+$db_name = "if0_37413050_landing_page_test";
 
 // Crear la conexión
 $conn = new mysqli($servername,$username,$password,$db_name);
@@ -12,7 +12,7 @@ $conn = new mysqli($servername,$username,$password,$db_name);
 if ($conn->connect_error){
     die("Conexión fallida: " . $conn->connect_error);
 } else{
-    echo "hola";
+    echo "Conexión exitosa";
 }
 
 ?>
