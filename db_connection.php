@@ -1,6 +1,6 @@
 <?php
 //Datos de conexión
-$servername = "localhost";
+$servername = "sql207.infinityfree.com";
 $username = "if0_37413050";
 $password = "2Zo52o7BmD";
 $db_name = "if0_37413050_landing_page_test";
